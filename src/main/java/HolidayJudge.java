@@ -10,7 +10,8 @@ public class HolidayJudge {
     // Test this legacy function : isHoliday()
 
     public boolean isHoliday() {
-        if (LocalDate.now().equals(LocalDate.parse("2024-12-25"))) {
+        LocalDate now = LocalDate.now();
+        if (now.getMonthValue() == 12 && now.getDayOfMonth() == 25) {
             return true;
         }
 
